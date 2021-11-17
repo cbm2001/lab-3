@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+<form action="/api/register" method="post" >
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="username" ></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="text" name="password" ></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type = "text" name= "name" ></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="number" name = "phone"></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td><input type="text" name="city"></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>   
+</form>
+<%- include('footer'); -%>
