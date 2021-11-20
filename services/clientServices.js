@@ -1,4 +1,4 @@
-const { Client } = require('../models/entities');
+//const { Client } = require('../models/entities');
 const clientDAO = require('../db/clientDAO');
 const bcrypt = require("bcryptjs");
 

@@ -3,10 +3,18 @@ const bcrypt = require("bcryptjs");
 
 //select all clients
 function find(callback) {
-    var rows = null;
+    //var rows = null;
     //put your code her to select clients and return the array
     //....
-    callback(null, rows);
+    const selectClient = "SELECT * from client; ";
+    database.getResult(selectClient, function(err, rows) {
+        if (! err) {
+            callback(null, rows);
+        } else {
+            console.log(err);
+            throw err;
+        }
+    });
 }
 
 function findByUsername(username, callback) {
@@ -16,6 +24,29 @@ function findByUsername(username, callback) {
             callback(null, rows);
         } else {
             console.log(err);
+        }
+    });
+}
+function findBySociety(society, callback) {
+    const selectClient = `SELECT * from client where society like '${society}';`;
+    database.getResult(selectClient, function(err, rows) {
+        if (!err) {
+            callback(null, rows);
+        } else {
+            console.log(err);
+            throw err;
+        }
+    });
+}
+
+function findByNumclient(num_client, callback) {
+    const selectClient = (`SELECT * from account where num_client like '${num_client}';`);
+    database.getResult(selectClient, function(err, rows) {
+        if (!err) {
+            callback(null, rows);
+        } else {
+            console.log(err);
+            throw err;
         }
     });
 }
@@ -76,6 +107,6 @@ module.exports = {
     findBySociety,
     findByNumclient,
     createClient,
-    deleteClient,
-    createInitialAccounts
+    /*deleteClient,
+    createInitialAccounts*/
 };

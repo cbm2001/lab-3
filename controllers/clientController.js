@@ -1,8 +1,8 @@
 const loginControl = (request, response) => {
     const clientServices = require('../services/clientServices');
 
-    let username = request.body.username;
-    let password = request.body.password;
+    let username = request.body;
+    let password = request.body;
     if (!username || !password) {
         response.send('login failed');
         response.end();
@@ -56,8 +56,8 @@ const registerControl = (request, response) => {
             client.num_client = insertedID;
             console.log(`Registration (${username}, ${insertedID}) successful!`);
             response.send(`Successful registration ${client.contact} (ID.${client.num_client})!`);
+            response.end()
         }
-        response.end();
     });
 };
 

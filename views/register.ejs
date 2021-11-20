@@ -1,33 +1,10 @@
 <%- include('header'); -%>
 <form action="/api/register" method="post" >
-    <table>
-        <tr>
-            <td>Username</td>
-            <td><input type="text" name="username" ></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="text" name="password" ></td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td><input type = "text" name= "name" ></td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><input type="text" name="address"></td>
-        </tr>
-        <tr>
-            <td>Phone Number</td>
-            <td><input type="number" name = "phone"></td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td><input type="text" name="city"></td>
-        </tr>
-        <tr>
-        <td colspan="2"><input type="submit" value="Save" ></td>
-        </tr>
-    </table>   
+        <input type="text" name="name" placeholder="Name" required autofocus>
+        <input type="number" name="phone" placeholder="Phone number" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <input type="text" name="city" placeholder="City" required>
+        <input type="text" name="zip" placeholder="Zip" required>
+        <button type="submit">Register</button>
 </form>
 <%- include('footer'); -%>
