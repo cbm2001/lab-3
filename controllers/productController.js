@@ -9,7 +9,7 @@ const getCatalogue = (request, response) => {
 const getProductByID = (request, response) => {
     const catalogueServices = require('../services/productServices');
     let reference = request.params.id;
-    console.log("----------------------------Reference: " + request);
+    //console.log("-----Reference: " + request);
     catalogueServices.searchIDService(reference, function(err, rows) {
         //console.log(rows);
         response.render('article', { product: rows });
