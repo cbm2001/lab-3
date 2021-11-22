@@ -6,13 +6,12 @@ const router = express.Router();
 
 //routes for dynamic processing of products
 //-----------------------------------------------
-
 //route for registration
 router.post('/api/register',clientController.registerControl);
 //route for login
-router.get('/api/login', clientController.loginControl);
-router.post('/api/clients', clientController.getClients);
-router.post('/api/clients/:id', clientController.getClientByNumclient);
+router.post('/api/login', clientController.loginControl);
+router.get('/api/clientDetails', clientController.getClient);
+
 //route for listing all products
 router.get('/api/catalogue', productController.getCatalogue);
 router.get('/api/article/:id', productController.getProductByID);

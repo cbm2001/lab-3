@@ -1,9 +1,14 @@
 <%- include('header'); -%>
-<h2> LOGIN </h2>
-<p>Please add the following details below </p>
-<form action="/api/login" method="GET">
-        <input type="text" name="username" placeholder="Username" required autofocus>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-</form>
+<div class="content">
+        <h2> LOGIN </h2>
+        <p>Please add the following details below </p>
+        <form action="/api/login" method="post">
+                Username : <input type="text" name="username" id="username">
+                Password : <input type="password" name="password" id="password">
+                <button type="submit">Login</button>
+        </form>
+        <!--<form action="/register">
+                <button>Register</button>
+        </form>-->
+</div>
 <%- include('footer'); -%>
