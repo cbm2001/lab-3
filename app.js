@@ -27,9 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
   
 app.use(session({
-      secret: 'test',
-      resave: true,
-      saveUninitialized: true
+    secret: 'keyboard goldfish',
+    resave: true,
+    saveUninitialized: true
 }));
   
 app.get("/login", (req, res) => {
